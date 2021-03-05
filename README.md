@@ -1,8 +1,12 @@
 # SurveyjsAngularCli
 
+//branch = main
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
 ## Set up your environment to run this project
+
+Important: this project needs **nodejs** installed on your system.
 
 1.  Clone this project to your machine using `git clone _URL_`.
 2.  After the project is downloaded to your system, go to "cmd.exe" on Windows, and change the directory to the folder you just created, in this case the folder will be called "survey-sample-angular"
