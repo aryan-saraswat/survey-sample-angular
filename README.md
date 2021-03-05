@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.1.
 
+## Set up your environment to run this project
+
+1.  Clone this project to your machine using `git clone _URL_`.
+2.  After the project is downloaded to your system, go to "cmd.exe" on Windows, and change the directory to the folder you just created, in this case the folder will be called "survey-sample-angular"
+3.  Execute the following instruction: `npm install`. This instruction uses npm to install all the dependencies you need to run this web app. They're all contained in "package.json"
+4.  After this, run `ng serve` and follow the step mentioned in section "Development Server".
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
