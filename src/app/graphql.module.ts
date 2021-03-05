@@ -20,4 +20,4 @@ export function createApollo(httpLink: HttpLink): ApolloClientOptions<any> {
     },
   ],
 })
-export class GraphQLModule {}//testin
+export class GraphQLModule {}//testingggg
