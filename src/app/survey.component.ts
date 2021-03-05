@@ -64,12 +64,12 @@ export class SurveyComponent implements OnInit {
       console.log(this.result); //extra
     });
 
-    surveyModel.onComplete.add(function (sender, options) { //extra
+    /*surveyModel.onComplete.add(function (sender, options) { //extra
       var xhr = new XMLHttpRequest();
       xhr.open("POST", "http://localhost:4000/");
       xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
       xhr.send(JSON.stringify(sender.data));
-  });
+  });*/
 
 
     Survey.SurveyNG.render("surveyElement", { model: surveyModel });
