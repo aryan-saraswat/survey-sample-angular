@@ -11,6 +11,11 @@ Important: this project needs **nodejs** installed on your system.
 3.  Execute the following instruction: `npm install`. This instruction uses npm to install all the dependencies you need to run this web app. They're all contained in "package.json"
 4.  After this, run `ng serve` and follow the step mentioned in section "Development Server".
 
+## Seeing the results:
+
+1.  Open the console on the browser where you run the app.
+2.  When you complete the survey, a JSON object is generated that helps us summarise the data we just collected and return it to the server.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
