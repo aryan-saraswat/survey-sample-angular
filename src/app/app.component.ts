@@ -95,32 +95,24 @@ export class AppComponent {
       "elements": [
        {
         "type": "checkbox",
-        "name": "fastFoodJoints",
-        "title": "Which fast food joints do you like eating at?",
+        "name": "fastFoodtype",
+        "title": "What kind of fast food do you usually eat?",
         "choices": [
          {
-          "value": "mcd",
-          "text": "McDonald's"
+          "value": "coffee",
+          "text": "Coffee/Snacks"
          },
          {
-          "value": "kfc",
-          "text": "KFC"
+          "value": "burgers",
+          "text": "Burgers and fries"
          },
          {
-          "value": "burgerKing",
-          "text": "Burger King"
+          "value": "chicken",
+          "text": "Fried chicken"
          },
          {
-          "value": "tacoBell",
-          "text": "Taco Bell"
-         },
-         {
-          "value": "subway",
-          "text": "Subway"
-         },
-         {
-          "value": "starbucks",
-          "text": "Starbucks"
+          "value": "sandwich",
+          "text": "Sandwiches"
          }
         ],
         "hasOther": true,
@@ -250,6 +242,91 @@ export class AppComponent {
        }
       ],
       "visibleIf": "{choice} = 'restaurant'"
+     },
+     {
+      "name": "page6",
+      "elements": [
+       {
+        "type": "radiogroup",
+        "name": "coffeePreference",
+        "visibleIf": "{fastFoodtype} contains 'coffee'",
+        "title": "Where do you go most often to have your coffee?",
+        "choices": [
+         {
+          "value": "starbucks",
+          "text": "Starbucks"
+         },
+         {
+          "value": "dd",
+          "text": "Dunkin' Donuts"
+         },
+         {
+          "value": "mcc",
+          "text": "McCafe"
+         }
+        ],
+        "hasOther": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "burgerPreference",
+        "visibleIf": "{fastFoodtype} contains 'burgers'",
+        "title": "Which place in your opinion has the best burgers?",
+        "choices": [
+         {
+          "value": "mcd",
+          "text": "McDonald's"
+         },
+         {
+          "value": "bk",
+          "text": "Burger King"
+         },
+         {
+          "value": "kfc",
+          "text": "KFC"
+         }
+        ],
+        "hasOther": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "friedChickenPreference",
+        "visibleIf": "{fastFoodtype} contains 'chicken'",
+        "title": "Where would you go to have good fried chicken?",
+        "choices": [
+         {
+          "value": "kfc",
+          "text": "KFC"
+         },
+         {
+          "value": "nando",
+          "text": "Nando's"
+         },
+         {
+          "value": "chili",
+          "text": "Chili's"
+         }
+        ],
+        "hasOther": true
+       },
+       {
+        "type": "radiogroup",
+        "name": "sandwichPreference",
+        "visibleIf": "{fastFoodtype} contains 'sandwich'",
+        "title": "Which place serves the best sandwiches?",
+        "choices": [
+         {
+          "value": "subway",
+          "text": "Subway"
+         },
+         {
+          "value": "bolten",
+          "text": "Bolten Cafe"
+         }
+        ],
+        "hasOther": true
+       }
+      ]
      }
     ]
    }
