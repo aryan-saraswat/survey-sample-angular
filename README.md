@@ -9,12 +9,13 @@ Important: this project needs **nodejs** installed on your system.
 1.  Clone this project to your machine using `git clone _URL_`.
 2.  After the project is downloaded to your system, go to "cmd.exe" on Windows, and change the directory to the folder you just created, in this case the folder will be called "survey-sample-angular"
 3.  Execute the following instruction: `npm install`. This instruction uses npm to install all the dependencies you need to run this web app. They're all contained in "package.json"
-4.  After this, run `ng serve` and follow the step mentioned in section "Development Server".
+4.  After this, open another command window and navigate to the cloned folder, and run the command `npx prisma studio`. This step opens a GUI on your web-browser, through which you can monitor your database. It should be empty when you start.
+5.  Then, open another command window, navigate to the cloned folder, and run `node src/index.js`. This will run a GraphQL Playground where you can write and execute queries and mutations to query/manipulate the database.
+6.  After you're done with these steps, run `ng serve`. This will run an Angular web app on your browser. When you fill out the survey, a corresponding entry will be made in your database.
 
 ## Seeing the results:
 
-1.  Open the console on the browser where you run the app.
-2.  When you complete the survey, a JSON object is generated that helps us summarise the data we just collected and return it to the server.
+After filling out the survey, you can refresh the Prisma Studio tab on your browser, and see a new entry with the data you filled out.
 
 ## Development server
 
