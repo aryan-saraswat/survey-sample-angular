@@ -14,35 +14,16 @@ export class AppComponent {
       "name": "page1",
       "elements": [
        {
-        "type": "checkbox",
-        "name": "personalDetails",
-        "title": "Would you like to give your name and/or email address?",
-        "choices": [
-         {
-          "value": "allowName",
-          "text": "Name"
-         },
-         {
-          "value": "allowEmail",
-          "text": "Email"
-         },
-         {
-          "value": "allowNone",
-          "text": "Nope, I value my privacy :D"
-         }
-        ]
-       },
-       {
         "type": "text",
         "name": "name",
         "title": "Please enter your name",
-        "enableIf": "{personalDetails} contains 'allowName'"
+        "isRequired": true
        },
        {
         "type": "text",
         "name": "email",
         "title": "Your email id:",
-        "enableIf": "{personalDetails} contains 'allowEmail'"
+        "isRequired": true
        }
       ]
      },
@@ -53,17 +34,18 @@ export class AppComponent {
         "type": "radiogroup",
         "name": "howOften",
         "title": "How often do you go out for food?",
+        "isRequired": true,
         "choices": [
          {
-          "value": "rarely",
+          "value": "RARE",
           "text": "Rarely"
          },
          {
-          "value": "moderate",
+          "value": "MODERATE",
           "text": "A moderate amount"
          },
          {
-          "value": "frequent",
+          "value": "FREQUENT",
           "text": "Frequently"
          }
         ]
@@ -77,13 +59,14 @@ export class AppComponent {
         "type": "radiogroup",
         "name": "choice",
         "title": "When you go out, do you prefer eating at fast food joints or restaurants?",
+        "isRequired": true,
         "choices": [
          {
-          "value": "fastFood",
+          "value": "FASTFOOD",
           "text": "Fast food"
          },
          {
-          "value": "restaurant",
+          "value": "RESTAURANT",
           "text": "Restaurants"
          }
         ]
@@ -115,7 +98,6 @@ export class AppComponent {
           "text": "Sandwiches"
          }
         ],
-        "hasOther": true,
         "selectAllText": "wow you selected all"
        }
       ],
@@ -128,6 +110,7 @@ export class AppComponent {
         "type": "radiogroup",
         "name": "cuisine",
         "title": "Which cuisine is your favourite out of the following?",
+        "isRequired": true,
         "choices": [
          {
           "value": "indian",
@@ -145,8 +128,7 @@ export class AppComponent {
           "value": "chinese",
           "text": "Chinese"
          }
-        ],
-        "hasOther": true
+        ]
        },
        {
         "type": "imagepicker",
@@ -264,8 +246,7 @@ export class AppComponent {
           "value": "mcc",
           "text": "McCafe"
          }
-        ],
-        "hasOther": true
+        ]
        },
        {
         "type": "radiogroup",
@@ -285,8 +266,7 @@ export class AppComponent {
           "value": "kfc",
           "text": "KFC"
          }
-        ],
-        "hasOther": true
+        ]
        },
        {
         "type": "radiogroup",
@@ -306,8 +286,7 @@ export class AppComponent {
           "value": "chili",
           "text": "Chili's"
          }
-        ],
-        "hasOther": true
+        ]
        },
        {
         "type": "radiogroup",
@@ -323,8 +302,7 @@ export class AppComponent {
           "value": "bolten",
           "text": "Bolten Cafe"
          }
-        ],
-        "hasOther": true
+        ]
        }
       ]
      }

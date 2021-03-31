@@ -1,0 +1,27 @@
+type Query {
+    info: String!
+    allPersons: [Person!]!
+  }
+
+  type Mutation {
+    createPerson(name: String!, email: String!, howOften: Frequency!, choice: Choice!): Person!
+  }
+
+  type Person {
+    id: ID!
+    name: String!
+    email: String!
+    howOften: Frequency!
+    choice: Choice!
+  }
+
+  enum Frequency {
+    RARE
+    MODERATE
+    FREQUENT
+    }
+
+    enum Choice {
+    FASTFOOD
+    RESTAURANT
+    }
