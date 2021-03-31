@@ -58,10 +58,49 @@ export class SurveyComponent implements OnInit {
       header.appendChild(span);
       header.appendChild(btn);
     });
+
     surveyModel.onComplete.add((result, options) => {
       this.submitSurvey.emit(result.data);
       this.result = result.data;
       console.log(this.result); //extra
+
+      let name = this.result['name']
+      let email = this.result['email']
+      let howOften = this.result['howOften']
+      let choice = this.result['choice']
+      console.log(name, email, howOften, choice);
+
+      var query = `
+      mutation createPerson($name: String!, $email: String!, $howOften: Frequency!, $choice: Choice!)
+      {
+        createPerson(name: $name, email: $email, howOften: $howOften, choice: $choice)
+        {
+          id,
+          name,
+          email,
+          howOften,
+          choice
+          }
+        }`;
+
+        fetch('http://localhost:4000/', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+          },
+          body: JSON.stringify({
+            query,
+            variables: {
+              name: name,
+              email: email,
+              howOften: howOften,
+              choice: choice
+            }
+          })
+        })
+        .then(r => r.json())
+        .then(data => console.log('data returned:', data));
     });
 
     /*surveyModel.onComplete.add(function (sender, options) { //extra

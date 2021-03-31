@@ -19,10 +19,13 @@
     "@angular/platform-browser": "~11.2.1",
     "@angular/platform-browser-dynamic": "~11.2.1",
     "@angular/router": "~11.2.1",
+    "@apollo/client": "^3.0.0",
+    "@prisma/client": "^2.20.1",
     "apollo-angular": "^2.4.0",
     "apollo-angular-link-http": "^1.11.0",
     "apollo-cache-inmemory": "^1.6.6",
     "apollo-client": "^2.6.10",
+    "apollo-server": "^2.22.2",
     "bootstrap": "^4.6.0",
     "graphql": "^15.5.0",
     "graphql-tag": "^2.11.0",
@@ -32,8 +35,7 @@
     "survey-pdf": "^1.8.32",
     "surveyjs-widgets": "^1.8.32",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.3",
-    "@apollo/client": "^3.0.0"
+    "zone.js": "~0.11.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.1",
@@ -49,6 +51,7 @@
     "karma-coverage": "~2.0.3",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "prisma": "^2.20.1",
     "protractor": "~7.0.0",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
